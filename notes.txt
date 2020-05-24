@@ -7,3 +7,20 @@ ADS1299+arduino EOG:
 uses this hardware:
 * http://liinc.bme.columbia.edu/wp-content/uploads/Electrooculogram-based-system-for-computer-control-using-a-multiple-feature-classification-model.pdf?x99316
 
+ADS1299+AVR EEG small battery powered, no isolation (in Turkish)
+http://biyoklinikder.org/TIPTEKNO18_Bildiriler/53.pdf
+
+Adam Feuer and others and University of South Carolina did some (unpublished?)
+work with an ADS1299 (reference board?) and arduinos. We have had email
+conversations with him
+https://www.mccauslandcenter.sc.edu/crnl/open-source-eegecgemg
+
+Looks related, but no detailed descriptions of hardware:
+https://link.springer.com/chapter/10.1007/978-981-10-4361-1_123
+http://www.psi.poli.usp.br/seminatec2017/SEMINATEC_2017_papers/SEMINATEC_2017_paper_51.pdf
+https://arxiv.org/abs/1808.03711
+https://aip.scitation.org/doi/abs/10.1063/1.5096694
+https://ieeexplore.ieee.org/abstract/document/8372771
+https://www.mdpi.com/1424-8220/18/7/2140/htm
+https://www.scitepress.org/Papers/2015/56455/56455.pdf
+
