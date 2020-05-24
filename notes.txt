@@ -1,0 +1,9 @@
+
+possible citations:
+
+ADS1299+arduino EOG:
+* https://ieeexplore.ieee.org/document/7117201
+
+uses this hardware:
+* http://liinc.bme.columbia.edu/wp-content/uploads/Electrooculogram-based-system-for-computer-control-using-a-multiple-feature-classification-model.pdf?x99316
+
