@@ -29,26 +29,33 @@
 % Create the title block
 \begin{flushleft}
 
-% Remove all text in italics when filling out the template and replace with your manuscripts corresponding text in regular font.
-\textit{Text in italics are template instructions. Remove and replace all instructions with regular font text.}
+% Remove all text in italics when filling out the template and replace with
+% your manuscripts corresponding text in regular font.
+\textit{Text in italics are template instructions. Remove and replace all
+	instructions with regular font text.}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{10pt}
 % \textbf{\large HardwareX article template}
 
 %Insert title
-%Max. 20 words. A good title should contain the fewest possible words that adequately describe the content of a paper.
-\textbf{Title:} \textit{Max. 20 words. A good title should contain the fewest possible words that adequately describe the content of a paper.}
+%Max. 20 words. A good title should contain the fewest possible words that
+%adequately describe the content of a paper.
+\textbf{Title:} OpenHardwareExG: an open-hardware biopotential data capture device
 
 %Insert Authors
-\textbf{Authors:} \textit{Author one, author two, and author three}
+\textbf{Authors:} Stephanie Medlock, Eric Herman, Kendrick Matthew Shaw
 
 %Insert Affiliations
-\textbf{Affiliations:} \textit{Affiliation one, affiliation two}
+\textbf{Affiliations:} Amsterdam University Medical Center loc. AMC, University of Amsterdam, Department of Medical Informatics, Amsterdam Public Health Research Institute, Meibergdreef 9, Amsterdam, the Netherlands.
+Foundation for Public Code
+Maria DB Foundation
+Department of Anesthesia, Critical Care and Pain Medicine, Massachusetts General Hospital, Harvard Medical School, 55 Fruit Street, Boston, MA, USA.
+
 
 %Insert Contact Email
 %Include institutional email address of the corresponding author
-\textbf{Contact email:} \textit{Contact email: Include institutional email address of the corresponding author}
+\textbf{Contact email:} s.k.medlock@amsterdamumc.nl
 
 %Insert Abstract
 %Max. 200 words. Remember that the abstract is what readers see first in electronic abstracting and indexing services. This is the advertisement of your article. Make it interesting, and easy to be understood. Be accurate and specific, keep it as brief as possible.
@@ -63,54 +70,29 @@
 
 \tabulinesep=1ex
 \begin{tabu} to \linewidth {|X|X[3,l]|}
-\hline  \textbf{Hardware name} & \textit{Insert hardware name}
-  %Please specify the name of the hardware that you invented / customized
-  \\
-  \hline \textbf{Subject area} & %
-  % Please state the subject area most relevant to the original community for which this hardware was developed. Example subject areas are listed below.
-  \begin{itemize}
-  \item \textit{Engineering and Material Science}
-  \item \textit{Chemistry and Biochemistry}
-  \item \textit{Medical (e.g. Pharmaceutical Science)}
-  \item \textit{Neuroscience}
-  \item \textit{Biological Sciences (e.g. Microbiology and Biochemistry)}
-  \item \textit{Environmental, Planetary and Agricultural Sciences}
-  \item \textit{Educational Tools and Open Source Alternatives to Existing Infrastructure}
-  \item \textit{General}
-  \end{itemize}
-  \\
-  \hline \textbf{Hardware type} &
-  \begin{itemize}
-  \item \textit{Imaging tools}
-  \item \textit{Measuring physical properties and in-lab sensors}
-  \item \textit{Biological sample handling and preparation}
-  \item \textit{Field measurements and sensors}
-  \item \textit{Electrical engineering and computer science}
-  \item \textit{Mechanical engineering and materials science}
-  \item \textit{Other (please specify)}
-  \end{itemize}
-  \\
+\hline  \textbf{Hardware name} & OpenHardwareExG rev 1 \\
+  \hline \textbf{Subject area} & Medical, Electrophysiology, Biopotential measurement\\
+  \hline \textbf{Hardware type} & Measuring physical properties and in-lab sensors, EEG, ECG, EMG \\
 \hline \textbf{Open source license} &
-  %Please specify the open source license. For more details see the guide to authors.
-  \textit{Please specify the open source license. For more details see the guide to authors.}
-  \\
+ Hardware: CERN open hardware license.\cite{CERNOHL} Software: GPLv3\cite{GPLv3} \\
 \hline \textbf{Cost of hardware} &
   %Approximate cost of hardware (complete breakdown will be included in the Bill of Materials).
   \textit{Approximate cost of hardware (complete breakdown will be included in the Bill of Materials).}
   \\
 \hline \textbf{Source file repository} &
-  % Link to the source file repository
-      % insert a DOI URL to an approved source file repository:  Mendeley Data, theOSF, or Zenodo (instructions).  For example: "https://doi.org/10.5281/zenodo.3346799"
-      % If there is no external repository write “Available in the article”
-  \textit{DOI:} \text{https://doi.org/10.17605/OSF.IO/42TKV}
+  DOI: \text{https://doi.org/10.17605/OSF.IO/42TKV}
 \linebreak
 \\\hline
 \end{tabu}
 \end{flushleft}
-% create the main body of the paper
 
 \section{Hardware in context}
 % Include a short description of the hardware, putting into context of similar open hardware and proprietary equipment in the field.
+EEG, ECG etc are important medical devices
+also useful for biopotential research, e.g. BCI, sea slugs
+cost of devices is a barrier, need for open hardware
+whatever groovy things HardwareX has published recently
+
 \textit{Include a short description of the hardware, putting into context of similar open hardware and proprietary equipment in the field.}
 \section{Hardware description}
 % Describe the hardware, highlighting the customization rather than the steps of the procedure. Highlight how it differs/which advantage it offers over pre-existing methods. For example, how could this hardware: be compared to other hardware in terms of cost or ease of use, be used in the development of further designs in a particular area, and so on.
@@ -119,9 +101,23 @@
 
 \textit{Describe the hardware, highlighting the customization rather than the steps of the procedure. Highlight how it differs/which advantage it offers over pre-existing methods. For example, how could this hardware: be compared to other hardware in terms of cost or ease of use, be used in the development of further designs in a particular area, and so on. \linebreak \linebreak Add 3-5 bulleted points to broadly explain to other researchers how the hardware could be potentially useful to them, for either standard or novel laboratory tasks, inside or outside of the original user community.}
 \begin{itemize}
-\item \dots
-\item \dots
-\item \dots
+\item story runs from the familiar to the exotic (arduino/usb -> EEG signals)
+\item SAM3X; USB 2.0 interface utility of Arduino compatibility
+\item Importance of electrical isolation; measures taken
+\item ADS1299 ADC
+\item antialiasing filters
+\item challenges of biopotential signals
+\item patient disconnect lights
+\item top boards/choice for touchproof connectors
+\item mention firmware and arduino shield extensibility in passing
+\end{itemize}
+
+\begin{itemize}
+\item Able to measure signals on the order of microvolts with input impedances of a few kiloohms
+\item Reinforced electrical isolation of analog inputs for safety of patient/subject
+\item Open hardware; low cost compared to commercial alternatives
+\item Compatible with Arduino software and extensible via Arduino shields
+\item Uses industry standard DIN 42 802 1.5 mm touch-proof plugs for patient connections
 \end{itemize}
 
 \section{Design files}
