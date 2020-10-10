@@ -48,8 +48,13 @@
 
 %Insert Affiliations
 \textbf{Affiliations:} Amsterdam University Medical Center loc. AMC, University of Amsterdam, Department of Medical Informatics, Amsterdam Public Health Research Institute, Meibergdreef 9, Amsterdam, the Netherlands.
-Foundation for Public Code
-Maria DB Foundation
+
+Foundation for Public Code vereniging, Keizersgracht 617, 1017 DS, Amsterdam, the Netherlands
+
+MariaDB Foundation, Gamla \r{A}bov\"{a}gen 38, 02700 Grankulla, Finland
+%LATIN CAPITAL LETTER A WITH RING ABOVE: U+00C5
+%LATIN SMALL LETTER A WITH DIAERESIS: U+00E4
+
 Department of Anesthesia, Critical Care and Pain Medicine, Massachusetts General Hospital, Harvard Medical School, 55 Fruit Street, Boston, MA, USA.
 
 
@@ -99,7 +104,7 @@ whatever groovy things HardwareX has published recently
 
 % > Add 3-5 bulleted points to broadly explain to other researchers how the hardware could be potentially useful to them, for either standard or novel laboratory tasks, inside or outside of the original user community.
 
-\textit{Describe the hardware, highlighting the customization rather than the steps of the procedure. Highlight how it differs/which advantage it offers over pre-existing methods. For example, how could this hardware: be compared to other hardware in terms of cost or ease of use, be used in the development of further designs in a particular area, and so on. \linebreak \linebreak Add 3-5 bulleted points to broadly explain to other researchers how the hardware could be potentially useful to them, for either standard or novel laboratory tasks, inside or outside of the original user community.}
+%Describe the hardware, highlighting the customization rather than the steps of the procedure. Highlight how it differs/which advantage it offers over pre-existing methods. For example, how could this hardware: be compared to other hardware in terms of cost or ease of use, be used in the development of further designs in a particular area, and so on. \linebreak \linebreak Add 3-5 bulleted points to broadly explain to other researchers how the hardware could be potentially useful to them, for either standard or novel laboratory tasks, inside or outside of the original user community.
 \begin{itemize}
 \item story runs from the familiar to the exotic (arduino/usb -> EEG signals)
 \item SAM3X; USB 2.0 interface utility of Arduino compatibility
@@ -140,7 +145,7 @@ The design files can be found at: \text{https://doi.org/10.17605/OSF.IO/42TKV}
 \end{tabu}
 
 % For each design file listed in the summary above, include a short description of the file below (one or two sentences)
-\textit{For each design file listed above, include a short description of the file here (one or two sentences)}
+
 
 \section{Bill of materials}
 % For a complex Bill of Materials, the complete Bill of Materials (editable spreadsheet file e.g., ODS file type or PDF file) can be uploaded in an open access online location such as the Open Science Framework repository. Include the link here. Alternatively, the Bill of Materials can be uploaded at the time of submission on the online Elsevier submission interface as supplementary material.
@@ -148,7 +153,16 @@ The design files can be found at: \text{https://doi.org/10.17605/OSF.IO/42TKV}
 % > To make it easy to tell which item in the Bill of Materials corresponds to which component in your design file(s), use matching designators in both places, or otherwise explain the correspondence.
 
 % > For material type, select from: Metal, semi-conductor, ceramic, polymer, biomaterial, organic, inorganic, composite, nanomaterial, semiconductor, non-specific, or other
-\textit{For a complex Bill of Materials, the complete Bill of Materials (editable spreadsheet file e.g., ODS file type or PDF file) can be uploaded in an open access online location such as the Open Science Framework repository. Include the link here. Alternatively, the Bill of Materials can be uploaded at the time of submission on the online Elsevier submission interface as supplementary material.}
+
+%For a complex Bill of Materials, the complete Bill of Materials (editable spreadsheet file e.g., ODS file type or PDF file) can be uploaded in an open access online location such as the Open Science Framework repository. Include the link here. Alternatively, the Bill of Materials can be uploaded at the time of submission on the online Elsevier submission interface as supplementary material.
+
+arduino-ads129x.bom \text{https://osf.io/zn8ut/
+% check VCAP capacitor values against datasheet. match datasheet or justify difference.
+patch-shield-analog.bom \text{https://osf.io/p2zbe/}
+patch-shield-digital.bom \test{https://osf.io/2wcev/}
+% bom for case
+
+
 \begin{itemize}
 \item \textit{To make it easy to tell which item in the Bill of Materials corresponds to which component in your design file(s), use matching designators in both places, or otherwise explain the correspondence.}
 \item \textit{For material type, select from: Metal, semi-conductor, ceramic, polymer, biomaterial, organic, inorganic, composite, nanomaterial, semiconductor, non-specific, or other}
