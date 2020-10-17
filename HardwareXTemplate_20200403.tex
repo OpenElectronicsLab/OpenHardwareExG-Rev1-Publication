@@ -133,6 +133,10 @@ The design files can be found at: \text{https://doi.org/10.17605/OSF.IO/42TKV}
 \subsection{Design Files Summary}
 % Please include a summary of all design files for your hardware by filling rows of the table below
 
+% We should look at moving most generated files to a top-level directory
+% Consider explaining a manifest of some sort in the repo itself with this
+% information plus the purpose of each file
+
 \tabulinesep=1ex
 \begin{tabu} to \linewidth {|X|X|X[1.5,1]|X[1.5,1]|}
 \hline
@@ -156,17 +160,14 @@ The design files can be found at: \text{https://doi.org/10.17605/OSF.IO/42TKV}
 
 %For a complex Bill of Materials, the complete Bill of Materials (editable spreadsheet file e.g., ODS file type or PDF file) can be uploaded in an open access online location such as the Open Science Framework repository. Include the link here. Alternatively, the Bill of Materials can be uploaded at the time of submission on the online Elsevier submission interface as supplementary material.
 
-arduino-ads129x.bom \text{https://osf.io/zn8ut/
+arduino-ads129x.bom \text{https://osf.io/zn8ut/}
 % check VCAP capacitor values against datasheet. match datasheet or justify difference.
 patch-shield-analog.bom \text{https://osf.io/p2zbe/}
-patch-shield-digital.bom \test{https://osf.io/2wcev/}
-% bom for case
+patch-shield-digital.bom \text{https://osf.io/2wcev/}
+% create and add BoM for laser-cut case
+% consider master BoM for the three layers + case
+% consider follow/transform-into suggested format of table below
 
-
-\begin{itemize}
-\item \textit{To make it easy to tell which item in the Bill of Materials corresponds to which component in your design file(s), use matching designators in both places, or otherwise explain the correspondence.}
-\item \textit{For material type, select from: Metal, semi-conductor, ceramic, polymer, biomaterial, organic, inorganic, composite, nanomaterial, semiconductor, non-specific, or other}
-\end{itemize}
 
 \tabulinesep=1ex
 \begin{tabu} to \linewidth {|X|X|X|X|X|X|X|}
