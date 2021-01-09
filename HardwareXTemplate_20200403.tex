@@ -26,6 +26,8 @@
 \titleformat{\section}[block]{\hspace{1em}\bfseries}{\thesection.}{0.5em}{}
 \titleformat{\subsection}[block]{\hspace{1em}}{\thesubsection}{0.5em}{}
 
+\usepackage[english]{babel}
+
 \begin{document}
 % Create the title block
 \begin{flushleft}
@@ -171,24 +173,24 @@ patch-shield-digital.bom \text{https://osf.io/2wcev/}
 % consider follow/transform-into suggested format of table below
 % we've decided to make a BOM using the table format below. will probably use a spreadsheet to make it.
 
-%TODO make this table look nicer after content has been determined
+%There does not seem to be any way to line-break part numbers that isn't horrible. Using package babel to line break English words correctly.
 \tabulinesep=1ex
-\begin{longtabu} to \linewidth {|X|X|X|X|X|X|X|X|}
+\begin{longtabu} to \linewidth {|X[0.5,l]|X[2,l]|X[1,l]|X[0.4,l]|X[0.5,l]|X[0.5,l]|X[0.55,l]|X[0.7,l]|}
 \hline
-\textbf{Designator} & \textbf{Component} & \textbf{Part number} & \textbf{Number} & \textbf{Cost per unit (Euro)} & \textbf{Total cost} & \textbf{Source of materials} & \textbf{Material type} \\\hline
+\textbf{Desig-nator} & \textbf{Component} & \textbf{Part number} & \textbf{Num-ber} & \textbf{Cost per unit: Euro} & \textbf{Total cost} & \textbf{Source of materials} & \textbf{Material type} \\\hline
 \multicolumn{8}{|l|}{Arduino ADS129x}	 \\\hline
-C1-32, C99, C101	& Multilayer Ceramic Capacitor MLCC - SMD/SMT 50V 270pF 0603 C0G 5\%	& C0603C271J5GACTU	& 34 &	0.09	& 3.06 &	Mouser	& Electronic	 \\\hline
-C33 & 1500pF ±1\% 50V Ceramic Capacitor C0G, NP0 0603 & GRM1885C1H152FA01D & 1 & 0.22 & 0.22 & Mouser & Electronic\\\hline
-Capacitors1  & 0.1µF ±5\% 16V Ceramic Capacitor X7R 0603 & VJ0603Y104JXJPW1BC & 42 & 0.11 & 4.62 & Mouser & Electronic\\\hline
-Capacitors2 & 10µF ±20\% 10V Ceramic Capacitor X7R 0805 & LMK212AB7106MG-T & 30 & 0.17 & 5.1 & Mouser & Electronic\\\hline
-C39 & 100µF Molded Tantalum Capacitors ±10\% 10V 2312 (C case) & 593D107X9010C2TE3 & 1 & 0.7 & 0.7 & Mouser & Electronic\\\hline
-C58-59, C62, C116 & 10µF ±20\% 50V Ceramic Capacitor X7R 1210 & UMK325AB7106MM-T & 4 & 0.65 & 2.6 & Mouser & Electronic\\\hline
-C78-79, C85, C90, C95 & Ceramic multilayer 22pF 50V C0G 2\% Pad SMD 0603 125°C T/R & VJ0603A220GXACW1BC & 5 & 0.12 & 0.6 & Mouser & Electronic\\\hline
+C1-32, C99, C101	& Multilayer Ceramic Capacitor MLCC - SMD/SMT 50V 270pF 0603 C0G 5\%	& C0603C271 J5GACTU	& 34 &	0.09	& 3.06 &	Mouser	& Electronic	 \\\hline
+C33 & 1500pF ±1\% 50V Ceramic Capacitor C0G, NP0 0603 & GRM1885C 1H152FA01D & 1 & 0.22 & 0.22 & Mouser & Electronic\\\hline
+Capac-itors1  & 0.1µF ±5\% 16V Ceramic Capacitor X7R 0603 & VJ0603Y10 4JXJPW1B C & 42 & 0.11 & 4.62 & Mouser & Electronic\\\hline
+Capac-itors2 & 10µF ±20\% 10V Ceramic Capacitor X7R 0805 & LMK212AB 7106MG-T & 30 & 0.17 & 5.1 & Mouser & Electronic\\\hline
+C39 & 100µF Molded Tantalum Capacitors ±10\% 10V 2312 (C case) & 593D107X 9010C2TE3 & 1 & 0.7 & 0.7 & Mouser & Electronic\\\hline
+C58-59, C62, C116 & 10µF ±20\% 50V Ceramic Capacitor X7R 1210 & UMK325AB7 106MM-T & 4 & 0.65 & 2.6 & Mouser & Electronic\\\hline
+C78-79, C85, C90, C95 & Ceramic multilayer 22pF 50V C0G 2\% Pad SMD 0603 125°C T/R & VJ0603A220 GXACW1BC & 5 & 0.12 & 0.6 & Mouser & Electronic\\\hline
 %C106, 108, 110, 113, 114, 117 not on schematic
-D1 & Zener Diode 27V 1.25W ±7\% Surface Mount DO-214AC & BZG03C27TR & 1 &  &  &  & \\\hline
-%obsolete. https://octopart.com/bzg03c27tr-vishay-14366651#PriceAndStock
-D2-3 & Schottky Diode 30V 2A Surface Mount M-FLAT & CMS06 & 2 &  &  &  & \\\hline
-%obsolete. https://eu.mouser.com/Search/Refine?Keyword=CMS06
+D1 & Zener Diode 27V 1.25W ±7\% Surface Mount DO-214AC & BZG03C27T R & 1 & 0.17 & 0.34 & Mouser & Electronic\\\hline
+%obsolete. https://octopart.com/bzg03c27tr-vishay-14366651#PriceAndStock Price is from our order.
+D2-3 & Schottky Diode 30V 2A Surface Mount M-FLAT & CMS06 & 2 & 0.48 & 0.96 & Mouser & Electronic\\\hline
+%obsolete. https://eu.mouser.com/Search/Refine?Keyword=CMS06 Price is from our order
 D4, D6 & LED Uni-Color Green 40mcd 570nm 2-Pin Chip 0603 & 598-8070-107F & 2 & 0.38 & 0.76 & Mouser & Electronic\\\hline
 %D5 not on schematic
 J1 & USB-B (USB TYPE-B) USB 2.0 Receptacle Connector 4 Position Through Hole, Right Angle & 61729-1011BLF & 1 & 0.89 & 0.89 & Mouser & Electronic\\\hline
@@ -211,39 +213,39 @@ P12 & header 2x2 male & 77313-101-04LF & 1 & 0.24 & 0.24 & Mouser & Electronic\\
 P13 & header 2x1 male & 68000-102 & 1 & 0.21 & 0.21 & Mouser & Electronic\\\hline
 R1-R32, R55-56 & 2.61 kOhms ±0.1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Anti-Sulfur, Automotive AEC-Q200 Thin Film & 754-RG1608P-2611-BT5 & 34 & 0.35 & 11.9 & Mouser & Electronic\\\hline
 R33 & 1 MOhms ±0.5\% 0.125W, 1/8W Chip Resistor 0805 (2012 Metric) Automotive AEC-Q200 Thin Film & ERA-6AED105V & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
-R34-37, R59 & 100 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200, Moisture Resistant Thick Film & RK73H1JTTD1003F & 5 & 0.1 & 0.5 & Mouser & Electronic\\\hline
-R38 & 68.1 kOhms ±1\% 0.125W, 1/8W Chip Resistor 0603 (1608 Metric) Anti-Sulfur, Automotive AEC-Q200, Moisture Resistant Thin Film & TNPW060368K1FHEA & 1 & 0.3 & 0.3 & Mouser & Electronic\\\hline
-R39, R41 & 39.2 kohm, ± 0.1\%, 63 mW, 0603, Thin Film & PCF0603R-39K2BT1 & 2 &  &  &  & \\\hline
-%only available as a reel (0.07 each at quantity 10000)
+R34-37, R59 & 100 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200, Moisture Resistant Thick Film & RK73H1JTT D1003F & 5 & 0.1 & 0.5 & Mouser & Electronic\\\hline
+R38 & 68.1 kOhms ±1\% 0.125W, 1/8W Chip Resistor 0603 (1608 Metric) Anti-Sulfur, Automotive AEC-Q200, Moisture Resistant Thin Film & TNPW06036 8K1FHEA & 1 & 0.3 & 0.3 & Mouser & Electronic\\\hline
+R39, R41 & 39.2 kohm, ± 0.1\%, 63 mW, 0603, Thin Film & PCF0603R-39K2BT1 & 2 & 0.14 & 0.28 & Mouser & Electronic\\\hline
+%only available as a reel; price is from our order
 R40 & 124 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film & ERJ-3EKF1243V & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
 R42-46, R48-51, R62-63 & 10 kOhms ±0.5\% 0.063W, 1/16W Chip Resistor 0603 (1608 Metric) Thin Film & RR0816P-103-D & 11 & 0.09 & 0.99 & Mouser & Electronic\\\hline
-R47 & 1 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film & CRCW06031K00FKEA & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
-R52 & 6.8 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Thin Film & RT0603FRE076K8L & 1 & 0.16 & 0.16 & Mouser & Electronic\\\hline
+R47 & 1 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film & CRCW06031 K00FKEA & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
+R52 & 6.8 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Thin Film & RT0603FRE 076K8L & 1 & 0.16 & 0.16 & Mouser & Electronic\\\hline
 R53-54 & 39 Ohms ±0.5\% 0.063W, 1/16W Chip Resistor 0603 (1608 Metric) Thin Film & RR0816Q-390-D & 2 & 0.09 & 0.18 & Mouser & Electronic\\\hline
 %R57 not in schematic
 R58 & 560 Ohms ±0.5\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thin Film & ERA-3AED561V & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
 R60-61 & 68 Ohms ±0.5\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thin Film & ERA-3AED680V & 2 & 0.1 & 0.2 & Mouser & Electronic\\\hline
 R64 & 8.45 kOhms ±0.5\% 0.063W, 1/16W Chip Resistor 0603 (1608 Metric) Thin Film & RR0816P-8451-D-90H & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
-R65 & 19.6 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film & CRCW060319K6FKEA & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
+R65 & 19.6 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film & CRCW06031 9K6FKEA & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
 R66-85 & 47 Ohms ±0.5\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thin Film & ERA-3AED470V & 20 & 0.11 & 2.2 & Mouser & Electronic\\\hline
 R86-87 & 20 mOhms ±1\% 0.333W, 1/3W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200, Current Sense Thick Film & ERJ-3BWFR020V & 2 & 0.83 & 1.66 & Mouser & Electronic\\\hline
 SW1 & Tactile Switch SPST-NO Top Actuated Surface Mount & B3SN-3012P & 1 & 0.82 & 0.82 & Mouser & Electronic\\\hline
-TH1 & Polymeric PTC Resettable Fuse 60V 140mA Ih Surface Mount 1812 (4532 Metric), Concave & PTS181260V014 & 1 & 0.25 & 0.25 & Mouser & Electronic\\\hline
-TH2 & Polymeric PTC Resettable Fuse 24V 500mA Ih Surface Mount 1812 (4532 Metric), Concave & MINIASMDC050F-2 & 1 & 0.4 & 0.4 & Mouser & Electronic\\\hline
-U1 & ADS1299 8 Channel AFE 24 Bit 42mW 64-TQFP (10x10) & ADS1299IPAG  & 1 & 51.71 & 51.71 & Mouser & Electronic\\\hline
-U2-3 & Linear Voltage Regulator IC 1 Output 150mA 8-MSOP-PowerPad & TPS7A4901DGNR & 2 & 2.42 & 4.84 & Mouser & Electronic\\\hline
+TH1 & Polymeric PTC Resettable Fuse 60V 140mA Ih Surface Mount 1812 (4532 Metric), Concave & PTS181260V 014 & 1 & 0.25 & 0.25 & Mouser & Electronic\\\hline
+TH2 & Polymeric PTC Resettable Fuse 24V 500mA Ih Surface Mount 1812 (4532 Metric), Concave & MINIASMD C050F-2 & 1 & 0.4 & 0.4 & Mouser & Electronic\\\hline
+U1 & ADS1299 8 Channel AFE 24 Bit 42mW 64-TQFP (10x10) & ADS1299 IPAG  & 1 & 51.71 & 51.71 & Mouser & Electronic\\\hline
+U2-3 & Linear Voltage Regulator IC 1 Output 150mA 8-MSOP-PowerPad & TPS7A4901 DGNR & 2 & 2.42 & 4.84 & Mouser & Electronic\\\hline
 U4, U14 & TRIAC Logic - Sensitive Gate 600V 800mA Surface Mount SC-73 & BT1308W-600D & 2 & 0.36 & 0.73 & Mouser & Electronic\\\hline
 U5, U18 & Isolated Module DC DC Converter 1 Output 9V 222mA 4.5V - 5.5V Input & R05P209S & 2 & 9.96 & 19.92 & Mouser & Electronic\\\hline
 U6, U8 & I²C Digital Isolator 5000Vrms 4 Channel 35kV/µs CMTI 16-SOIC (0.295", 7.50mm Width) & Si8606AD-B-IS & 2 & 4.54 & 9.08 & Mouser & Electronic\\\hline
 U7 & General Purpose Digital Isolator 5000Vrms 6 Channel 150Mbps 35kV/µs CMTI 16-SOIC (0.295", 7.50mm Width) & Si8662ED-B-IS & 2 & 2.42 & 4.84 & Mouser & Electronic\\\hline
-U9 & Buffer, Non-Inverting 1 Element 1 Bit per Element 3-State Output 5-TSSOP  & 74AUP1G125GW & 1 & 0.40 & 0.40 & Mouser & Electronic\\\hline
-U10 & ARM® Cortex®-M3 SAM3X Microcontroller IC 32-Bit 84MHz 512KB (512K x 8) FLASH 144-LQFP (20x20) & ATSAM3X8EA-AU & 1 & 8.2 & 8.2 & Mouser & Electronic\\\hline
+U9 & Buffer, Non-Inverting 1 Element 1 Bit per Element 3-State Output 5-TSSOP  & 74AUP1G125 GW & 1 & 0.40 & 0.40 & Mouser & Electronic\\\hline
+U10 & ARM® Cortex®-M3 SAM3X Microcontroller IC 32-Bit 84MHz 512KB (512K x 8) FLASH 144-LQFP (20x20) & ATSAM3X8 EA-AU & 1 & 8.2 & 8.2 & Mouser & Electronic\\\hline
 %U11 not in schematic
-U12 & Linear Voltage Regulator IC 1 Output 1A SOT-223 & NCP1117ST50T3G & 1 & 0.4 & 0.4 & Mouser & Electronic\\\hline
+U12 & Linear Voltage Regulator IC 1 Output 1A SOT-223 & NCP1117ST 50T3G & 1 & 0.4 & 0.4 & Mouser & Electronic\\\hline
 U13 & 17V Clamp 5A (8/20µs) Ipp Tvs Diode Surface Mount SOT-23-6 & USBLC6-2SC6 & 1 & 0.38 & 0.38 & Mouser & Electronic\\\hline
-U15-16 & Shunt Voltage Reference IC 36V ±0.5\% SOT-23-3 & TL431BIDBZR & 2 & 0.38 & 0.76 & Mouser & Electronic\\\hline
-U17 & EEPROM Memory IC 128Kb (16K x 8) I²C 1MHz 400ns 8-SOIC & CAT24C128WI-GT3 & 1 & 0.24 & 0.24 & Mouser & Electronic\\\hline
-U19 & Linear Voltage Regulator IC 1 Output 1A SOT-223 & NCP1117LPST33T3G & 1 & 0.38 & 0.38 & Mouser & Electronic\\\hline
+U15-16 & Shunt Voltage Reference IC 36V ±0.5\% SOT-23-3 & TL431BIDB ZR & 2 & 0.38 & 0.76 & Mouser & Electronic\\\hline
+U17 & EEPROM Memory IC 128Kb (16K x 8) I²C 1MHz 400ns 8-SOIC & CAT24C128 WI-GT3 & 1 & 0.24 & 0.24 & Mouser & Electronic\\\hline
+U19 & Linear Voltage Regulator IC 1 Output 1A SOT-223 & NCP1117LPS T33T3G & 1 & 0.38 & 0.38 & Mouser & Electronic\\\hline
 X1 & 12MHz ±10ppm Crystal 20pF 100 Ohms 4-SMD, No Lead & ECS-120-20-33-CKM-TR & 1 & 0.84 & 0.84 & Mouser & Electronic\\\hline
 X2 & 32.768kHz ±20ppm Crystal 12.5pF 70 kOhms 2-SMD, No Lead & ABS07-32.768KHZ-T & 1 & 0.53 & 0.53 & Mouser & Electronic\\\hline
 Other1 & shunts (jumper) & SX1100-B & 24 & 0.09 & 2.16 & Mouser & Electronic\\\hline
@@ -254,25 +256,25 @@ Other1 & shunts (jumper) & SX1100-B & 24 & 0.09 & 2.16 & Mouser & Electronic\\\h
 %
 %
 \multicolumn{8}{|l|}{Patch shield: digital} \\\hline
-C1, C10-13 & Multilayer Ceramic Capacitors MLCC - SMD/SMT 0603 0.1uF 16volts X7R 5\%  & VJ0603Y104JXJPW1BC & 5 & 0.11 & 0.55 & Mouser & Electronic\\\hline
-C2-9 & Multilayer Ceramic Capacitors MLCC - SMD/SMT 0805 10VDC 10uF 20\% X7R  & LMK212AB7106MG-T & 5 & 0.17 & 0.85 & Mouser & Electronic\\\hline
+C1, C10-13 & Multilayer Ceramic Capacitors MLCC - SMD/SMT 0603 0.1uF 16volts X7R 5\%  & VJ0603Y104 JXJPW1BC & 5 & 0.11 & 0.55 & Mouser & Electronic\\\hline
+C2-9 & Multilayer Ceramic Capacitors MLCC - SMD/SMT 0805 10VDC 10uF 20\% X7R  & LMK212AB7 106MG-T & 5 & 0.17 & 0.85 & Mouser & Electronic\\\hline
 LEDs1 & LED Uni-Color Green 40mcd 570nm 2-Pin Chip 0603 & 598-8070-107F & 17 & 0.38 & 6.46 & Mouser & Electronic\\\hline
 LEDs2 & LED SMD Yellow Clear Non-Diff  & VLMY1300-GS08 & 16 & 0.36 & 5.76 & Mouser & Electronic\\\hline
 L1 & 220 Ohms @ 100MHz 1 Power, Signal Line Ferrite Bead 0805 2A 100mOhm & MH2029-221Y & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
 R1-8, R10-18 & 560 Ohms ±0.5\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thin Film & ERA-3AED561V & 16 & 0.09 & 1.44 & Mouser & Electronic\\\hline
 R9, R19-25 & 47 Ohms ±0.5\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thin Film & ERA-3AED470V & 8 & 0.11 & 0.88 & Mouser & Electronic\\\hline
-U1 & EEPROM 128K-Bit I2C Serial CMOS EEPROM & CAT24C128WI-GT3 & 1 & 0.24 & 0.24 & Mouser & Electronic\\\hline
+U1 & EEPROM 128K-Bit I2C Serial CMOS EEPROM & CAT24C128 WI-GT3 & 1 & 0.24 & 0.24 & Mouser & Electronic\\\hline
 %no U2, 3 or 4 on schematic
-U5-8 & Counter Shift Registers 8-Bit 3 State Shift  & MC74HC595ADTG & 4 & 0.39 & 1.56 & Mouser & Electronic\\\hline
+U5-8 & Counter Shift Registers 8-Bit 3 State Shift  & MC74HC595 ADTG & 4 & 0.39 & 1.56 & Mouser & Electronic\\\hline
 \multicolumn{8}{|l|}{Patch shield: analog} \\\hline
 D1 & LED Uni-Color Green 40mcd 570nm 2-Pin Chip 0603 & 598-8070-107F & 1 & 0.38 & 0.38 & Mouser & Electronic\\\hline
 P1-17, P19-34 & Panel mount Touchproof socket & TD-985XX & 33 & 2.10 & 69.30 & Discount Disposables & Electronic\\\hline
 P18 & header 20x2 male & 77313-101-40LF & 1 & 1.69 & 1.69 & Mouser & Electronic\\\hline
-P35 & female stackable header 2x08 height=8.5mm+10.5mm & 4UCCON-20331 & 2 &  0.18 & 0.36  & 4UCCON & Electronic\\\hline
-P36a-d & Arduino Stackable Header Kit - R3 & PRT-11417 & 1 & 1.22 & 1.22 & SparkFun & Electronic\\\hline
-R1 & 1 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film & CRCW06031K00FKEA & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
+P35 & female stackable header 2x08 height=8.5mm+10.5mm & 4UCON-20331 & 2 &  0.18 & 0.36  & 4UCON & Electronic\\\hline
+P36a-d & Arduino Stackable Header Kit - R3 & PRT-11417 & 1 & 1.22 & 1.22 & Spark-Fun & Electronic\\\hline
+R1 & 1 kOhms ±1\% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film & CRCW06031 K00FKEA & 1 & 0.09 & 0.09 & Mouser & Electronic\\\hline
 \multicolumn{8}{|l|}{Case}\\\hline
-CAC1 & Cut acrylic case & N/A & 1 & 44.21 & 44.21 & Formulor GmbH & Acrylic\\\hline
+CAC1 & Cut acrylic case & N/A & 1 & 44.21 & 44.21 & Formu-lor GmbH & Acrylic\\\hline
 \end{longtabu}
 Capacitors1: C34, C38, C44-47, C50-57, C63-66, C73-76, C80, C82-83, C86, C88-89, C91-94, C96-98, C100, C104-105, C109, C112, C119-120
 
