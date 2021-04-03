@@ -47,18 +47,18 @@
 \textbf{Title:} OpenHardwareExG: an open-hardware biopotential data capture device
 
 %Insert Authors
-\textbf{Authors:} Stephanie Medlock, Eric Herman, Kendrick Matthew Shaw
+\textbf{Authors:} Stephanie Medlock^{1}, Eric Herman^{2,3}, Kendrick Matthew Shaw^{4}
 
 %Insert Affiliations
-\textbf{Affiliations:} Amsterdam University Medical Center loc. AMC, University of Amsterdam, Department of Medical Informatics, Amsterdam Public Health Research Institute, Meibergdreef 9, Amsterdam, the Netherlands.
+\textbf{Affiliations:} ^{1}Amsterdam University Medical Center loc. AMC, University of Amsterdam, Department of Medical Informatics, Amsterdam Public Health Research Institute, Meibergdreef 9, Amsterdam, the Netherlands.
 
-Foundation for Public Code vereniging, Keizersgracht 617, 1017 DS, Amsterdam, the Netherlands
+^{2}Foundation for Public Code vereniging, Keizersgracht 617, 1017 DS, Amsterdam, the Netherlands
 
-MariaDB Foundation, Gamla \r{A}bov\"{a}gen 38, 02700 Grankulla, Finland
+^{3}MariaDB Foundation, Gamla \r{A}bov\"{a}gen 38, 02700 Grankulla, Finland
 %LATIN CAPITAL LETTER A WITH RING ABOVE: U+00C5
 %LATIN SMALL LETTER A WITH DIAERESIS: U+00E4
 
-Department of Anesthesia, Critical Care and Pain Medicine, Massachusetts General Hospital, Harvard Medical School, 55 Fruit Street, Boston, MA, USA.
+^{4}Department of Anesthesia, Critical Care and Pain Medicine, Massachusetts General Hospital, Harvard Medical School, 55 Fruit Street, Boston, MA, USA.
 
 
 %Insert Contact Email
@@ -67,7 +67,13 @@ Department of Anesthesia, Critical Care and Pain Medicine, Massachusetts General
 
 %Insert Abstract
 %Max. 200 words. Remember that the abstract is what readers see first in electronic abstracting and indexing services. This is the advertisement of your article. Make it interesting, and easy to be understood. Be accurate and specific, keep it as brief as possible.
-\textbf{Abstract:} \textit{Max. 200 words. Remember that the abstract is what readers see first in electronic abstracting and indexing services. This is the advertisement of your article. Make it interesting, and easy to be understood. Be accurate and specific, keep it as brief as possible.}
+\textbf{Abstract:} 
+%\textit{Max. 200 words. Remember that the abstract is what readers see first in electronic abstracting and indexing services. This is the advertisement of your article. Make it interesting, and easy to be understood. Be accurate and specific, keep it as brief as possible.}
+%How about this structure:
+%Objective/purpose of device:
+The OpenHardwareExG is an open hardware device for capturing biopotential data, such as electrocardiogram (ECG), electroencephalogram (EEG), electrooculogram (EOG), or electromyogram (EMG). 
+%Description of device
+%Conclusion/impact: What makes this unique?
 
 %Insert Keywords
 % At least 3 keywords. There is no limit on the no. of keywords you can list. Please remember that effective keywords should not repeat words appearing in your title, and should be neither too general nor too narrow.
@@ -83,11 +89,7 @@ Department of Anesthesia, Critical Care and Pain Medicine, Massachusetts General
   \hline \textbf{Hardware type} & Measuring physical properties and in-lab sensors, EEG, ECG, EMG \\
 \hline \textbf{Open source license} &
  Hardware: CERN open hardware license.\cite{CERNOHL} Software: GPLv3\cite{GPLv3} \\
-\hline \textbf{Cost of hardware} &
-  %TODO calculate after making BOM
-  %Approximate cost of hardware (complete breakdown will be included in the Bill of Materials).
-  \textit{Approximate cost of hardware (complete breakdown will be included in the Bill of Materials).}
-  \\
+\hline \textbf{Cost of hardware} & Approximately €240 per unit (excluding assembly) \\
 \hline \textbf{Source file repository} &
   DOI: \text{https://doi.org/10.17605/OSF.IO/42TKV}
 \linebreak
@@ -100,9 +102,9 @@ Department of Anesthesia, Critical Care and Pain Medicine, Massachusetts General
 EEG, ECG etc are important medical devices
 also useful for biopotential research, e.g. BCI, sea slugs
 cost of devices is a barrier, need for open hardware
+differentiate from OpenBCI and other projects (design for electrical separation)
 whatever groovy things HardwareX has published recently
 
-\textit{Include a short description of the hardware, putting into context of similar open hardware and proprietary equipment in the field.}
 \section{Hardware description}
 % Describe the hardware, highlighting the customization rather than the steps of the procedure. Highlight how it differs/which advantage it offers over pre-existing methods. For example, how could this hardware: be compared to other hardware in terms of cost or ease of use, be used in the development of further designs in a particular area, and so on.
 
@@ -148,42 +150,42 @@ The design files can be found at: \text{https://doi.org/10.17605/OSF.IO/42TKV}
 additional-logic.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/xqt2f/ \\\hline
 ads1299.dcm & KiCAD library description & CERN OHL v1.1 & https://osf.io/x7nga/ \\\hline
 ads1299.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/xsgjw/ \\\hline
-arduino-ads129x.kicad\_pcb & PCB layout & CERN OHL v1.1 & \dots \\\hline
-arduino-ads129x.pro & KiCAD project file & CERN OHL v1.1 & \dots \\\hline
-arduino-ads129x-rescue.dcm & KiCAD library description & CERN OHL v1.1 & \dots \\\hline
-arduino-ads129x-rescue.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
-arduino-ads129x.sch & KiCAD schematic & CERN OHL v1.1 & \dots \\\hline
-arduino-shield.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
-arduino-shield.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-esd.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
-fiducial\_mark.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-Hole\_M3.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-isolators.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
-MSOP8\_PowerPad.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-patch-shield-analog.kicad\_pcb & PCB layout & CERN OHL v1.1 & \dots \\\hline
-patch-shield-analog.pro & KiCAD project file & CERN OHL v1.1 & \dots \\\hline
-patch-shield-analog-rescue.dcm & KiCAD library description & CERN OHL v1.1 & \dots \\\hline
-patch-shield-analog-rescue.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
-patch-shield-analog.sch & KiCAD schematic & CERN OHL v1.1 & \dots \\\hline
-patch-shield-digital.kicad\_pcb & PCB layout & CERN OHL v1.1 & \dots \\\hline
-patch-shield-digital.pro & KiCAD project file & CERN OHL v1.1 & \dots \\\hline
-patch-shield-digital-rescue.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
-patch-shield-digital.sch & KiCAD schematic & CERN OHL v1.1 & \dots \\\hline
-regulators.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
-rs485.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
-sam3x8e.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
-SC70-6.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-SIP7\_ISOLATOR.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-smt-crystals.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
-smt-crystals.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-smt-inductors.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-smt-pin-array.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-smt-tactile-button.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-SOIC.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-sym-lib-table & KiCAD list of symbol libraries & CERN OHL v1.1 & \dots \\\hline
-Touchproof-socket.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-TSSOP20.mod & KiCAD footprint module & CERN OHL v1.1 & \dots \\\hline
-voltage-translators.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dots \\\hline
+arduino-ads129x.kicad\_pcb & PCB layout & CERN OHL v1.1 & https://osf.io/ghtze/  \\\hline
+arduino-ads129x.pro & KiCAD project file & CERN OHL v1.1 & https://osf.io/sgnej/  \\\hline
+arduino-ads129x-rescue.dcm & KiCAD library description & CERN OHL v1.1 & https://osf.io/heay5/  \\\hline
+arduino-ads129x-rescue.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/a6stq/  \\\hline
+arduino-ads129x.sch & KiCAD schematic & CERN OHL v1.1 & https://osf.io/8re5f/  \\\hline
+arduino-shield.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/r8gpu/  \\\hline
+arduino-shield.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/8q2zg/  \\\hline
+esd.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/6m5fe/  \\\hline
+fiducial\_mark.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/w5h9u/  \\\hline
+Hole\_M3.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/h82kw/  \\\hline
+isolators.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/n95qv/ \\\hline
+MSOP8\_PowerPad.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/w4yhf/ \\\hline
+patch-shield-analog.kicad\_pcb & PCB layout & CERN OHL v1.1 & https://osf.io/dxgak/ \\\hline
+patch-shield-analog.pro & KiCAD project file & CERN OHL v1.1 & https://osf.io/3bca7/ \\\hline
+patch-shield-analog-rescue.dcm & KiCAD library description & CERN OHL v1.1 & https://osf.io/tcngv/ \\\hline
+patch-shield-analog-rescue.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/4etbv/ \\\hline
+patch-shield-analog.sch & KiCAD schematic & CERN OHL v1.1 & https://osf.io/2mcxs/ \\\hline
+patch-shield-digital.kicad\_pcb & PCB layout & CERN OHL v1.1 & https://osf.io/735uc/ \\\hline
+patch-shield-digital.pro & KiCAD project file & CERN OHL v1.1 & https://osf.io/e5b9c/ \\\hline
+patch-shield-digital-rescue.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/dxmce/ \\\hline
+patch-shield-digital.sch & KiCAD schematic & CERN OHL v1.1 & https://osf.io/tw6dy/ \\\hline
+regulators.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/s8y32/ \\\hline
+rs485.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/dx79s/ \\\hline
+sam3x8e.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/j3e9d/ \\\hline
+SC70-6.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/ax4vu/ \\\hline
+SIP7\_ISOLATOR.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/rt6up/ \\\hline
+smt-crystals.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/9u256/ \\\hline
+smt-crystals.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/zgxbc/ \\\hline
+smt-inductors.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/zgxbc/ \\\hline
+smt-pin-array.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/ybhc3/ \\\hline
+smt-tactile-button.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/cqvm7/ \\\hline
+SOIC.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/523ck/ \\\hline
+sym-lib-table & KiCAD list of symbol libraries & CERN OHL v1.1 & https://osf.io/ryfw7/ \\\hline
+Touchproof-socket.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/ymp9d/ \\\hline
+TSSOP20.mod & KiCAD footprint module & CERN OHL v1.1 & https://osf.io/e753r/ \\\hline
+voltage-translators.lib & KiCAD schematic symbols library & CERN OHL v1.1 & https://osf.io/xfc3m/ \\\hline
 % \textit{Design file 1} & \textit{e.g. CAD file, figures, videos} & \textit{All designs must be submitted under an open hardware license. Enter the corresponding open source license for the file.} & \textit{Enter a link to the online location or the sentence: ``available with the article'', as appropriate}  \\\hline
 
 
@@ -194,13 +196,6 @@ voltage-translators.lib & KiCAD schematic symbols library & CERN OHL v1.1 & \dot
 
 \section{Bill of materials}
 % For a complex Bill of Materials, the complete Bill of Materials (editable spreadsheet file e.g., ODS file type or PDF file) can be uploaded in an open access online location such as the Open Science Framework repository. Include the link here. Alternatively, the Bill of Materials can be uploaded at the time of submission on the online Elsevier submission interface as supplementary material.
-
-% > To make it easy to tell which item in the Bill of Materials corresponds to which component in your design file(s), use matching designators in both places, or otherwise explain the correspondence.
-
-% > For material type, select from: Metal, semi-conductor, ceramic, polymer, biomaterial, organic, inorganic, composite, nanomaterial, semiconductor, non-specific, or other
-
-%For a complex Bill of Materials, the complete Bill of Materials (editable spreadsheet file e.g., ODS file type or PDF file) can be uploaded in an open access online location such as the Open Science Framework repository. Include the link here. Alternatively, the Bill of Materials can be uploaded at the time of submission on the online Elsevier submission interface as supplementary material.
-
 arduino-ads129x.bom \text{https://osf.io/zn8ut/}
 % check VCAP capacitor values against datasheet. match datasheet or justify difference.
 patch-shield-analog.bom \text{https://osf.io/p2zbe/}
@@ -210,7 +205,7 @@ patch-shield-digital.bom \text{https://osf.io/2wcev/}
 % consider follow/transform-into suggested format of table below
 % we've decided to make a BOM using the table format below. will probably use a spreadsheet to make it.
 
-%There does not seem to be any way to line-break part numbers that isn't horrible. Using package babel to line break English words correctly.
+%The dashes are added by hand, because there does not seem to be any way to line-break part numbers that isn't horrible. Using package babel to line break English words correctly.
 \tabulinesep=1ex
 \begin{longtabu} to \linewidth {|X[0.5,l]|X[2,l]|X[1,l]|X[0.4,l]|X[0.5,l]|X[0.5,l]|X[0.55,l]|X[0.7,l]|}
 \hline
@@ -331,15 +326,11 @@ LEDs2: D2, D4, D6, D8, D10, D12, D14, D16, D20, D22, D24, D26, D28, D30, D32, D3
 % > Use visual instructions such as schematics, images, and videos.
 % > Clearly reference design files and component parts described in the Design File Summary and Bill of Materials.
 % >Highlight potential safety concerns that may arise
+\subsection{Arduino-ADS129x board}
+\subsection{Patch shield: analog}
+\subsection{Patch shield: digital}
+\subsection{Case}
 
-\textit{Provide detailed, step by step instructions for the construction of the reported hardware
- include all necessary information for reproducing the submitted hardware.
-\begin{itemize}
-\item Explain and, when possible, characterize design decisions. Including design alternatives if they exist.
-\item Use visual instructions such as schematics, images, and videos.
-\item Clearly reference design files and component parts described in the Design File Summary and Bill of Materials.
-\item Highlight potential safety concerns that may arise
-\end{itemize}}
 
 \section{Operation instructions}
 %Provide detailed instructions for the safe and proper operation of the hardware.
@@ -347,55 +338,30 @@ LEDs2: D2, D4, D6, D8, D10, D12, D14, D16, D20, D22, D24, D26, D28, D30, D32, D3
 %> Use visual instructions as necessary.
 %> Highlight potential safety hazards.
 
-\textit{Provide detailed instructions for the safe and proper operation of the hardware.
-\begin{itemize}
-\item Step-by-step operational instructions for operating the hardware.
-\item Use visual instructions as necessary.
-\item Highlight potential safety hazards.
-\end{itemize}}
-
 \section{Validation and characterization}
 %Demonstrate the operation of the hardware and characterize its performance over relevant critical metrics
 %> Demonstrate the use of the hardware for a relevant use case.
 %> If possible, characterize performance of the hardware over operational parameters.
 %> Create a bulleted list that describes the capabilities (and limitations) of the hardware. For example consider descriptions of load, operation time, spin speed, coefficient of variation, accuracy, precision and etc.
 
-\textit{Demonstrate the operation of the hardware and characterize its performance over relevant critical metrics
-\begin{itemize}
-\item Demonstrate the use of the hardware for a relevant use case.
-\item If possible, characterize performance of the hardware over operational parameters.
-\item Create a bulleted list that describes the capabilities (and limitations) of the hardware. For example consider descriptions of load, operation time, spin speed, coefficient of variation, accuracy, precision and etc.
-\end{itemize}}
-
 \section{Acknowledgements}
 % [List here those individuals who provided help during the research (e.g., providing language help, writing assistance or proof reading the article, etc.).] Please also identify who provided financial support for the conduct of the research and/or preparation of the article and to briefly describe the role of the sponsor(s), if any, in study design; in the collection, analysis and interpretation of data; in the writing of the report; and in the decision to submit the article for publication. If the funding source(s) had no such involvement then this should be stated.}
 
-\textit{[List here those individuals who provided help during the research (e.g., providing language help, writing assistance or proof reading the article, etc.).] Please also identify who provided financial support for the conduct of the research and/or preparation of the article and to briefly describe the role of the sponsor(s), if any, in study design; in the collection, analysis and interpretation of data; in the writing of the report; and in the decision to submit the article for publication. If the funding source(s) had no such involvement then this should be stated.}
-
 \section{Declaration of interest}
+The authors have no conflicts of interest to declare.
 % a statement must be included even if there is no conflict of interest
 % All authors must disclose any financial and personal relationships with other people or organizations that could inappropriately influence (bias) their work. Examples of potential conflicts of interest include employment, consultancies, stock ownership, honoraria, paid expert testimony, patent applications/registrations, and grants or other funding. Authors must disclose any interests in a summary declaration of interest statement in the manuscript file. If there are no interests to declare then please state this: 'Declarations of interest: none'. This summary statement will be ultimately published if the article is accepted. More information.}
 
-\textit{[a statement must be included even if there is no conflict of interest] \linebreak
-All authors must disclose any financial and personal relationships with other people or organizations that could inappropriately influence (bias) their work. Examples of potential conflicts of interest include employment, consultancies, stock ownership, honoraria, paid expert testimony, patent applications/registrations, and grants or other funding. Authors must disclose any interests in a summary declaration of interest statement in the manuscript file. If there are no interests to declare then please state this: 'Declarations of interest: none'. This summary statement will be ultimately published if the article is accepted. More information.}
 
 \section{Human and animal rights}
+No human or animal subjects were involved in this work. Testing of the device was conducted with the authors as subjects.
 %> If the work involves the use of human subjects, the author should ensure that the work described has been carried out in accordance with the appropriate ethical guidelines.
 %> If the work involves the use of human subjects, the author should ensure that the work described has been carried out in accordance with The Code of Ethics of the World Medical Association (Declaration of Helsinki) for experiments involving humans; Uniform Requirements for manuscripts submitted to Biomedical journals. Authors should include a statement in the manuscript that informed consent was obtained for experimentation with human subjects. The privacy rights of human subjects must always be observed.
 %> All animal experiments should comply with the ARRIVE guidelines and should be carried out in accordance with the U.K. Animals (Scientific Procedures) Act, 1986 and associated guidelines, EU Directive 2010/63/EU for animal experiments, or the National Institutes of Health guide for the care and use of Laboratory animals (NIH Publications No. 8023, revised 1978) and the authors should clearly indicate in the manuscript that such guidelines have been followed
 
-\textit{
-\begin{itemize}
-\item If the work involves the use of human subjects, the author should ensure that the work described has been carried out in accordance with the appropriate ethical guidelines. \item If the work involves the use of human subjects, the author should ensure that the work described has been carried out in accordance with The Code of Ethics of the World Medical Association (Declaration of Helsinki) for experiments involving humans; Uniform Requirements for manuscripts submitted to Biomedical journals. Authors should include a statement in the manuscript that informed consent was obtained for experimentation with human subjects. The privacy rights of human subjects must always be observed. \item All animal experiments should comply with the ARRIVE guidelines and should be carried out in accordance with the U.K. Animals (Scientific Procedures) Act, 1986 and associated guidelines, EU Directive 2010/63/EU for animal experiments, or the National Institutes of Health guide for the care and use of Laboratory animals (NIH Publications No. 8023, revised 1978) and the authors should clearly indicate in the manuscript that such guidelines have been followed.\end{itemize}}
-
 \section*{References}
 %> Include at least one reference, to the original publication of the hardware you customized.
 %> Include other references as required. Include references to put your device in context in the literature. For more information on the reference format in HardwareX please see the Guide for Authors at: https://www.elsevier.com/journals/hardwarex/2468-0672/guide-for-authors
-
-\textit{\begin{itemize}
-\item Include at least one reference, to the original publication of the hardware you customized.
-\item Include other references as required. Include references to put your device in context in the literature. For more information on the reference format in HardwareX please see the Guide for Authors at: https://www.elsevier.com/journals/hardwarex/2468-0672/guide-for-authors
-\end{itemize}}
 
 \end{document}
 
